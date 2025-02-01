@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUNILKUMAR BUPATHI - Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Homepage Container */
+    .homepage {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+    }
+
+    /* Introduction Section */
+    .intro {
+      text-align: center;
+      max-width: 600px;
+      padding: 2rem;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    /* Semi-Circle Buttons */
+    .corner-button {
+      position: absolute;
+      width: 120px;
+      height: 60px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .corner-button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+
+    .top-left {
+      top: 0;
+      left: 0;
+      border-radius: 0 0 60px 0;
+    }
+
+    .top-right {
+      top: 0;
+      right: 0;
+      border-radius: 0 0 0 60px;
+    }
+
+    .bottom-left {
+      bottom: 0;
+      left: 0;
+      border-radius: 0 60px 0 0;
+    }
+
+    .bottom-right {
+      bottom: 0;
+      right: 0;
+      border-radius: 60px 0 0 0;
+    }
+
+    /* Content Overlay */
+    .content {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+      color: #333;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #2575fc;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .content a {
+      color: #2575fc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .content a:hover {
+      text-decoration: underline;
+    }
+
+    /* Show Content */
+    .content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="homepage">
+    <!-- Introduction -->
+    <div class="intro">
+      <h1>SUNILKUMAR BUPATHI</h1>
+      <p>Hi, I'm a passionate web developer with expertise in HTML5, CSS3, JavaScript, SAPUI5, XSJS, and XML. I love creating innovative and user-friendly solutions.</p>
+    </div>
+
+    <!-- Semi-Circle Buttons -->
+    <button class="corner-button top-left" onclick="showContent('about')">About Me</button>
+    <button class="corner-button top-right" onclick="showContent('projects')">Projects</button>
+    <button class="corner-button bottom-left" onclick="showContent('portfolio')">Portfolio</button>
+    <button class="corner-button bottom-right" onclick="showContent('contact')">Contact</button>
+
+    <!-- Content Sections -->
+    <div id="about" class="content">
+      <h2>About Me</h2>
+      <p>I have 2+ years of experience in the industry. My skills include HTML5, CSS3, JavaScript, SAPUI5, XSJS, and XML. I enjoy solving complex problems and building innovative solutions.</p>
+    </div>
+
+    <div id="projects" class="content">
+      <h2>Projects</h2>
+      <p>Here are some of my projects:</p>
+      <ul>
+        <li>Project 1: Description of Project 1.</li>
+        <li>Project 2: Description of Project 2.</li>
+      </ul>
+    </div>
+
+    <div id="portfolio" class="content">
+      <h2>Portfolio</h2>
+      <p>Check out my portfolio to see my work and achievements.</p>
+      <a href="#">View Portfolio</a>
+    </div>
+
+    <div id="contact" class="content">
+      <h2>Contact Me</h2>
+      <p>If you'd like to get in touch, feel free to email me at <a href="mailto:sunilkumar.bhupathi.1999@gmail.com">sunilkumar.bhupathi.1999@gmail.com</a>.</p>
+    </div>
+  </div>
+
+  <script>
+    // Function to show content
+    function showContent(sectionId) {
+      // Hide all content sections
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      // Show the selected content section
+      const selectedContent = document.getElementById(sectionId);
+      if (selectedContent) {
+        selectedContent.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
