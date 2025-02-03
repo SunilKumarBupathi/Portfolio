@@ -180,12 +180,14 @@
   </div>
 
   <script>
-    // Function to show content
     function showContent(sectionId) {
+      // Hide the intro section
+      document.querySelector('.intro').style.display = 'none';
+    
       // Hide all content sections
       const contents = document.querySelectorAll('.content');
       contents.forEach(content => content.classList.remove('active'));
-
+    
       // Show the selected content section
       const selectedContent = document.getElementById(sectionId);
       if (selectedContent) {
