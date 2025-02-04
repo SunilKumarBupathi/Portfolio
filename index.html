@@ -6,38 +6,32 @@
   <title>SUNILKUMAR BUPATHI - Portfolio</title>
   <style>
     html, body {
-  overflow: auto; /* Allow scrolling */
-}
-
-.homepage {
-  flex-direction: column; /* Stack elements vertically on smaller screens */
-  padding: 20px; /* Add padding to avoid cut-off buttons */
-  min-height: 100vh; /* Ensure full height */
-  box-sizing: border-box;
-}
-
-.corner-button {
-  width: 100px;
-  height: 50px;
-  font-size: 0.9rem;
-}
-
-/* Ensure buttons stay within view */
-@media (max-width: 600px) {
-  .corner-button {
-    width: 90px; /* Smaller buttons */
-    height: 45px;
-    font-size: 0.8rem;
-  }
-
-  .top-left, .top-right {
-    top: 10px;
-  }
-
-  .bottom-left, .bottom-right {
-    bottom: 10px;
-  }
-}
+      overflow: hidden;
+    }
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    /* Homepage Container */
+    .homepage {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+    }
 
     /* Introduction Section */
     .intro {
