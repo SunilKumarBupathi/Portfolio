@@ -21,6 +21,7 @@
       align-items: center;
       height: 100vh;
     }
+
     /* Homepage Container */
     .homepage {
       position: relative;
@@ -137,6 +138,18 @@
     /* Show Content */
     .content.active {
       display: block;
+    }
+    @media (max-width: 768px) {
+      .corner-button {
+        width: 100px;
+        height: 50px;
+        font-size: 0.9rem;
+      }
+      body {
+        padding: 10px;
+        font-size: 14px;
+        height: auto;
+      }
     }
   </style>
 </head>
